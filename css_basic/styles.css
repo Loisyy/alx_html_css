@@ -1,0 +1,107 @@
+/* Global styling */
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header styling */
+header {
+    background-color: #222;
+    color: white;
+    padding: 15px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #ff9800;
+}
+
+/* Add logo styling (if added later) */
+.logo {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+/* Article styling */
+article {
+    background-color: white;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Links inside article */
+article a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+/* Image styling */
+article img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #222;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Aside styling */
+aside {
+    background-color: #eeeeee;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #222;
+    text-align: center;
+    color: white;
+    padding: 12px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ff9800;
+}
+
+footer a:hover {
+    color: white;
+}
