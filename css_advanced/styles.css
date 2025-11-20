@@ -1,0 +1,33 @@
+/* Reset and Base Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+header {
+    background: url('/images/hero-image.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(85.91% 85.91% at 50% 14.09%, rgba(41, 48, 61, 0) 0%, #071629 100%);
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 150px;
+    position: relative;
+    z-index: 2;
+}
+
