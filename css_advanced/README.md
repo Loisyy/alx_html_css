@@ -44,4 +44,4 @@ Text colors, fonts, and button designs match the Figma design.
 Borders added to separate sections visually.
 🚀 How to Run
 Clone this repository:
-git clone https://github.com/Loisy/alx_html_css
+git clone https://github.com/Loisyy/alx_html_css

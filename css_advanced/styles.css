@@ -1,3 +1,4 @@
+
 /* Reset */
 * {
   margin: 0;
@@ -9,78 +10,89 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-/* === HEADER + FIRST SECTION BACKGROUND === */
-header, main > section:first-of-type {
-  background: url("images/hero-image.png") no-repeat center center/cover;
-  color: #fff;
-  position: relative;
+/* Header section*/
+header {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 10px 0;
 }
 
-/* Optional overlay for readability */
-header::before,
-main > section:first-of-type::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 0;
-}
-
-header nav,
-main > section:first-of-type > div {
-  position: relative;
-  z-index: 1;
-}
-
-/* === NAVBAR === */
 nav {
-  display: flex;
-  justify-content: space-between; /* logo left, links right */
-  align-items: center;
-  padding: 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
 }
 
 nav img {
-  height: 50px;
+    width: 160px;
+    height: auto;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #fff;
-  font-size: 1rem;
+  font-size: 12px;
   font-weight: 600;
   transition: color 0.3s ease;
-}
+} 
 
 nav ul li a:hover {
   color: #ffd700; /* golden hover */
 }
 
-/* === HERO CONTENT === */
+/* Hero Section */
 main > section:first-of-type {
-  text-align: center;
-  padding: 120px 20px 80px;
+    position: relative;
+    background-image: url('/images/Object.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 200px 20px 20px;
+    text-align: center;
+} 
+
+main > section:first-of-type::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+   ;
+}
+
+main > section:first-child > * {
+    position: relative;
+    z-index: 2;
+}
+
+main > section:first-child > div:first-child {
+    margin-bottom: 100px;
+    margin-top: 18px;
+
 }
 
 main > section:first-of-type h1 {
   font-size: 4rem;
   font-weight: 700;
-  margin-bottom: 20px;
 }
 
-main > section:first-of-type span {
+main > section:first-of-type > div:first-child span {
   display: inline-block;
   margin: 0 15px;
   font-size: 0.8rem;
-  font-weight: 700;
-  color: #fdfdfd; /* gold keywords */
+  font-weight: 600;
+  color: #fdfdfd; 
 }
 
 /* Button */
@@ -89,31 +101,29 @@ main > section:first-of-type button {
   margin-top: 25px;
   padding: 14px 40px;
   font-size: 0.9rem;
-  font-weight: bold;
+  font-weight: 700;
   border: none;
-  border-radius: 25px; /* curved ends */
-  background: purple;
+  border-radius: 25px; 
+  background: #C271FF;
   color: #fff;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 main > section:first-of-type button:hover {
-  background: #5a0ea1; /* darker purple */
+  background: #9356DC; /* darker purple */
 }
 
-/* === LEARN FROM THE PROS === */
+/* Learn from the pros */
 main > section:first-of-type h2 {
   margin-top: 80px;
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 500;
 }
 
-main > section:first-of-type h2 span {
-  font-size: 2rem;
-  font-weight: 900;
-  color: rgb(227, 23, 227); /* only 'Learn' in purple */
-  border-color: #0a0909;
+main > section:first-of-type h2::before {
+ content: 'Learn ';
+    color: #C271FF;
 }
 
 /* Pros grid */
@@ -134,6 +144,7 @@ main > section:first-of-type > div:last-child img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+   object-fit: cover;
   margin-bottom: 10px;
 }
 
@@ -145,9 +156,11 @@ main > section:first-of-type > div:last-child h3 {
 main > section:first-of-type > div:last-child p {
   font-size: 0.9rem;
   color: #eee;
+  font-style: italic;
+   opacity: 0.8;
 }
 
-/* === GLOBAL / COMMON === */
+/*  GLOBAL / COMMON  */
 section {
   padding: 90px 40px;
 }
@@ -164,68 +177,77 @@ p {
   color: #555;
 }
 
-blockquote {
-  font-size: 0.9rem;
-  font-style: italic;
-  line-height: 1.6;
-  color: #333; text-align: center;
-}
-
-section {
-  padding: 30px 30px;
-  background: #0a0909;
-  border-bottom: 20px solid #111111; /* long rectangular border line */
-}
-
-/* === QUOTE SECTION === */
+/* Quote Section */
+/* Quote Section – Lavender Background */
 .quote-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;background-color: #d0b0ed;
-  width: 100%;               /* take full width of the page */
-  max-width: 100%;           /* prevent shrinking */
+    padding: 60px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    background-color: #C271FF;
+    width: 100%;
+    color: white;
 }
 
+/* Avatar */
 .quote-section img {
-  max-width: 200px;
-  border-radius: 10px;
-  flex-shrink: 0;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
 }
 
-.quote-content {
-  max-width: 600px;
+/* Quote Content */
+.quote-section .quote-content {
+    max-width: 600px;
 }
 
-.quote-content blockquote {
-  margin-bottom: 20px;
-  color: #111;
+/* Quote text */
+.quote-section blockquote {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-weight: 400;
+    color: #fff;
 }
 
-.quote-content h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 5px;
+/* Name */
+.quote-section h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
-.quote-content p {
-  font-size: 0.95rem;
-  color: #777;
+/* Subtitle */
+.quote-section p {
+    font-style: italic;
+    color: #fff;
+    opacity: 0.9;
+    font-size: 0.95rem;
+    margin: 0;
 }
 
-/* === VIDEOS SECTION === */
-.videos-section {
+
+/* Most Popular Tutorials */
+main > section:nth-child(3) {
   padding: 80px 40px;
   background: #fff;
 }
 
-.videos-section h2 {
+main > section:nth-child(3) h2 {
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 50px;
+}
+main > section:nth-child(3) h2 .first::after {
+    content: " popular";
+    color: #C271FF;
+    font-weight: 700;
+    margin: 0 8px;
 }
 
 /* Grid for video cards */
@@ -342,21 +364,21 @@ section {
 
 /* Membership Section */
 .membership-section {
-  background: #010e1b;   /* navy blue */
+  background: #010e1b;   
   padding: 80px 40px;
   text-align: center;
-  color: white;          /* default text color */
+  color: white;          
 }
 
 membership-section h2 {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 60px;
-  color: #fdfdfd; /* default for the rest of the text */
+  color: #fdfdfd; 
 }
 
 .membership-section h2 .highlight {
-  color: #a445ed; /* purple just for "Free" */
+  color: #C271FF; /* purple just for "Free" */
 }
 
 /* Container for the 4 cards */
@@ -395,7 +417,7 @@ membership-section h2 {
 
 /* Button */
 .membership-section button {
-  background-color: #a445ed;   /* purple button */
+  background-color: #C271FF;   /* purple button */
   color: white;
   border: none;
   padding: 15px 40px;
